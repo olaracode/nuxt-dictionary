@@ -4,11 +4,7 @@ const data = ref(null);
 const word = ref(null);
 
 async function fetchData() {
-  data.value = await useFetch(
-    `/api/dictionary/${
-      route.value.query.search ? route.value.query.search : ""
-    }`
-  );
+  data.value = await useFetch(`/api/dictionary/${route.value.query.search}`);
   word.value = data.value?.data?.word || null;
 }
 
