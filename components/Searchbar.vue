@@ -1,7 +1,6 @@
 <script setup>
 const search = ref("");
 const searchFnc = () => {
-  console.log(search.value);
   navigateTo({
     path: "/",
     query: { search: search.value },

@@ -11,8 +11,6 @@ const antonyms = computed(() => {
 const synonyms = computed(() => {
   return meaning.definitions.map((d) => d.synonyms).flat();
 });
-console.log(antonyms);
-console.log(synonyms);
 </script>
 <template>
   <div class="my-5">
